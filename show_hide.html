@@ -22,46 +22,44 @@
       
       
     </ul>
+
     <!-- nav bar -->
 
-       <!-- login form start -->
+       <!-- Show-hide start -->
        <div class="row">
-        <h2 class="pb-2 text-primary">Registration Form</h2>
+        <h2 class="pb-2 text-primary">Show/hide</h2>
       <div class="col-4">
-        <input id="userName" type="text" placeholder="User name" class="form-control">
+        <h1 id ="title" class="text-success bg-body-secondary p-1 rounded-2 text-center" style="transition: all linear .3s;">MERN BATCH-06</h1>
       </div>
       <div class="col-4">
-        <input id="password" type="password" placeholder="Password" class="form-control">
+        <button onclick="show()"class="btn btn-danger w-100 p-3">Show</button>
       </div>
       <div class="col-4">
-        <button onclick="submitForm()"class="btn btn-success w-100">Register</button>
+        <button onclick="hide()"class="btn btn-success w-100 p-3">Hide</button>
       </div>
        </div>
-   </div>
-   <!-- login form end -->
+      </div>
+   <!-- Show-hide end -->
 
 
 <script>
 
-// login form start
+// Show-hide start 
 
-function submitForm() {
-
-    let userName=document.getElementById('userName').value;
-    let password=document.getElementById('password').value;
-    let loginData= {
-        userName:userName,
-        password:password
-    }
-
-    console.log(loginData);
-
-    
+function show() {
+  let title=document.getElementById('title');
+  title.classList.remove('d-none')
+  
+};
+function hide() {
+  let title=document.getElementById('title');
+  title.classList.add('d-none')
+  
 };
 
 
 
-// login form end
+// Show-hide end 
    
 
 </script>
